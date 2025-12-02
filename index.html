@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MajorMiters | Seamless Gutters & Protection</title>
+  <style>
+    :root {
+      --brand: #1b4367;
+      --accent: #f7b733;
+      --light: #f4f7fb;
+      --muted: #4f5d68;
+      --dark: #0f1f2f;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: var(--dark);
+      background: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--dark), var(--brand));
+      color: white;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 80px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 6vw;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      font-size: 14px;
+      color: #d5e7ff;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav a:hover { opacity: 0.8; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      align-items: center;
+      padding: 32px 6vw 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 46px);
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+
+    .hero p { color: #dbe9ff; margin: 0 0 24px; font-size: 18px; }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .button {
+      background: var(--accent);
+      color: #0f1319;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,0,0,0.22); }
+
+    .ghost {
+      border: 1px solid rgba(255,255,255,0.45);
+      color: white;
+      background: transparent;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 12px 26px rgba(15, 31, 47, 0.08);
+      border: 1px solid #e3eaf2;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      color: #dbe9ff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-card h3 { margin: 0 0 6px; font-size: 18px; color: var(--dark); }
+    .hero-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    main { padding: 40px 6vw 80px; background: var(--light); }
+
+    h2 { margin-top: 0; font-size: clamp(28px, 3vw, 34px); color: var(--dark); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .section { margin-bottom: 48px; }
+
+    .section p.subhead { color: var(--muted); margin-top: -8px; }
+
+    .icon { font-size: 20px; background: #eef3fa; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: var(--brand); }
+
+    .list-item { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: center; }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      align-items: center;
+    }
+
+    ul.highlight { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    ul.highlight li { display: flex; align-items: center; gap: 10px; color: var(--muted); }
+    ul.highlight span { color: var(--brand); font-weight: 700; }
+
+    footer {
+      padding: 28px 6vw 40px;
+      background: #0f1f2f;
+      color: #dbe9ff;
+      text-align: center;
+    }
+
+    @media (min-width: 960px) {
+      header { padding-bottom: 110px; }
+      .hero { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="icon" style="background: rgba(255,255,255,0.1); color: #f7b733;">MM</div>
+        <div>
+          MajorMiters<br>
+          <span>Seamless Gutters</span>
+        </div>
+      </div>
+      <div>
+        <a href="#services">Services</a>
+        <a href="#why">Why us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <div class="badge">Veteran-owned • Licensed & insured</div>
+        <h1>Seamless gutters installed right the first time.</h1>
+        <p>MajorMiters keeps rainwater in line with precision-fit seamless gutters, guards, and seasonal maintenance. Protect your roof, siding, and foundation with a crew that measures twice and miter-cuts once.</p>
+        <div class="cta-row">
+          <a class="button" href="#contact">Schedule your free inspection</a>
+          <a class="button ghost" href="tel:5551234567">Call 555-123-4567</a>
+        </div>
+      </div>
+      <div class="card hero-card">
+        <h3>What makes us different</h3>
+        <p>• On-site custom forming for exact fit.</p>
+        <p>• Color-matched downspouts and clean miters.</p>
+        <p>• Heavy-duty fasteners and leveled runs.</p>
+        <p>• Guard options that keep debris out, not water in.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="services">
+      <h2>Everything your gutters need</h2>
+      <p class="subhead">From first cut to final cleanup, MajorMiters delivers dependable protection for your home.</p>
+      <div class="grid">
+        <div class="card list-item">
+          <div class="icon">🛠️</div>
+          <div>
+            <h3>Seamless installations</h3>
+            <p>Aluminum and steel gutters formed on-site for fewer joints, tighter seals, and custom lengths.</p>
+          </div>
+        </div>
+        <div class="card list-item">
+          <div class="icon">🛡️</div>
+          <div>
+            <h3>Gutter guards</h3>
+            <p>Screen and micro-mesh options that stop leaves, pine needles, and pests while keeping flow moving.</p>
+          </div>
+        </div>
+        <div class="card list-item">
+          <div class="icon">🧭</div>
+          <div>
+            <h3>Repairs & tune-ups</h3>
+            <p>Re-sloping, resealing, and re-fastening existing runs so water drains where it should.</p>
+          </div>
+        </div>
+        <div class="card list-item">
+          <div class="icon">🧹</div>
+          <div>
+            <h3>Seasonal cleanings</h3>
+            <p>Debris removal, flush tests, and downspout checks to keep everything flowing year-round.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card" id="why">
+      <div class="split">
+        <div>
+          <h2>Built for long-term protection</h2>
+          <p class="subhead">We line up every detail so water moves off your roof and away from your foundation.</p>
+          <ul class="highlight">
+            <li><span>Exact slopes:</span> Laser-level measurements keep every run dialed for proper drainage.</li>
+            <li><span>Cleaner corners:</span> Tight miters and hidden hangers for a crisp, low-profile look.</li>
+            <li><span>Trusted materials:</span> Durable gauge metal, stainless screws, and color-matched sealants.</li>
+            <li><span>Local accountability:</span> Born here, built here, and always on time for your project.</li>
+          </ul>
+        </div>
+        <div class="card" style="background:white;">
+          <h3 style="margin-top:0;">Our simple process</h3>
+          <div class="list-item" style="margin-bottom:14px;">
+            <div class="icon">1</div>
+            <div>
+              <strong>Measure & design</strong>
+              <p class="subhead" style="margin:4px 0 0;">We evaluate roof lines, fascia, and drainage goals to map an exact plan.</p>
+            </div>
+          </div>
+          <div class="list-item" style="margin-bottom:14px;">
+            <div class="icon">2</div>
+            <div>
+              <strong>Form & install</strong>
+              <p class="subhead" style="margin:4px 0 0;">Seamless runs are formed on-site, leveled, and secured with hidden fasteners.</p>
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="icon">3</div>
+            <div>
+              <strong>Protect & maintain</strong>
+              <p class="subhead" style="margin:4px 0 0;">Add guards and seasonal checkups to keep your investment moving water for years.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="card split">
+        <div>
+          <h2>Ready for gutter peace of mind?</h2>
+          <p class="subhead">Tell us about your home. We respond within one business day to set up a free inspection.</p>
+          <div class="cta-row" style="margin-top:12px;">
+            <a class="button" href="mailto:hello@majormiters.com">Email hello@majormiters.com</a>
+            <a class="button ghost" href="tel:5551234567">Call 555-123-4567</a>
+          </div>
+        </div>
+        <div>
+          <h3>Service area highlights</h3>
+          <p class="subhead">Residential and light commercial gutters throughout the metro area.</p>
+          <ul class="highlight">
+            <li>Seamless installs, 5" and 6" profiles</li>
+            <li>Downspout rerouting and extensions</li>
+            <li>Fascia and soffit coordination</li>
+            <li>Storm-readiness checks before wet seasons</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>MajorMiters Seamless Gutters</strong> · Veteran-owned, insured, and ready to help your home handle every storm.
+  </footer>
+</body>
+</html>
